@@ -14,5 +14,18 @@ class Program{
         {
             Console.WriteLine($"{i+1} - {pokemonSpecies.Results[i].Name}");
         }
+
+        Console.Write("Escolha qual pokemon deseja ver as habilidades: ");
+        int option = int.Parse(Console.ReadLine());
+
+        client = new RestClient($"https://pokeapi.co/api/v2/pokemon/{option}/");
+        request = new RestRequest();
+        response = client.Execute(request);
+
+        var pokemonDetails = JsonConvert.DeserializeObject<PokemonDetailsResult>(response.Content);
+        for (int i = 0; i < pokemonDetails.Abilities.Count; i++)
+        {
+            Console.WriteLine(pokemonDetails.Abilities[i].Ability.Name);
+        }
     }
 }

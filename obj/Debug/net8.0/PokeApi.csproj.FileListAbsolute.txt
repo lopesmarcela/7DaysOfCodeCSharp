@@ -22,3 +22,4 @@ C:\Users\a879946\Documents\PokeApi\obj\Debug\net8.0\PokeApi.csproj.AssemblyRefer
 C:\Users\a879946\Documents\PokeApi\obj\Debug\net8.0\PokeApi.csproj.Up2Date
 C:\Users\a879946\Documents\PokeApi\bin\Debug\net8.0\Extensions.dll
 C:\Users\a879946\Documents\PokeApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\a879946\Documents\PokeApi\obj\Debug\net8.0\PokeApi.sourcelink.json
