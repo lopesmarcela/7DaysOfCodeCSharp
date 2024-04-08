@@ -23,9 +23,14 @@ class Program{
         response = client.Execute(request);
 
         var pokemonDetails = JsonConvert.DeserializeObject<PokemonDetailsResult>(response.Content);
+        Console.WriteLine($"Nome: {pokemonDetails.Name}");
+        Console.WriteLine($"Altura: {pokemonDetails.Height}");
+        Console.WriteLine($"Peso: {pokemonDetails.Weight}");
+        Console.WriteLine("Habilidades: ");
         for (int i = 0; i < pokemonDetails.Abilities.Count; i++)
         {
-            Console.WriteLine(pokemonDetails.Abilities[i].Ability.Name);
+            Console.WriteLine($"{pokemonDetails.Abilities[i].Ability.Name}");
         }
+        
     }
 }
